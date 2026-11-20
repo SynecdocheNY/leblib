@@ -5,6 +5,13 @@ const ONE_HALF: super::r64 = Frac(1, 2);
 #[allow(dead_code)]
 const ONE_THIRD: super::r64 = Frac(1, 3);
 
+#[allow(non_camel_case_types)]
+pub type r32 = Frac<i16>;
+#[allow(non_camel_case_types)]
+pub type r64 = Frac<i32>;
+#[allow(non_camel_case_types)]
+pub type r128 = Frac<i64>;
+
 /// Fraction data type with support for hetereogeneous numerator and denomenator.
 #[derive(Debug)]
 pub struct Frac<N, D = N>(pub N, pub D);
